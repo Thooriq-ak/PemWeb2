@@ -9,5 +9,8 @@ class Kelurahan extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['nama','kecamatan_nama'];
+    protected $fillable = [
+        'nama',
+        'kecamatan_nama'
+    ];
 }

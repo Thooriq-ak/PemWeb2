@@ -6,6 +6,8 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\PasienController;
+use App\Models\Kelurahan;
+use App\Models\Pasien;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,8 @@ use App\Http\Controllers\PasienController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// laravel 1
 
 Route::get('/', function () {
     return view('welcome');
@@ -34,7 +38,8 @@ Route::get('/profile/thooriq', function () {
     return view('Halaman Profile');
 });
 
-//praktikum laravel 2
+// laravel 2
+
 Route::get('/dashboard', [AdminController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
@@ -43,3 +48,15 @@ Route::get('/about', [AboutController::class, 'index']);
 
 Route::get('/dashboard/kelurahan', [KelurahanController::class, 'index']);
 Route::get('/dashboard/pasien', [PasienController::class, 'index']);
+
+// laravel 4
+
+Route::get('/dashboard/kelurahan/create', [KelurahanController::class, 'create']);
+Route::post('/dashboard/kelurahan/store', [KelurahanController::class, 'store']);
+Route::get('/dashboard/kelurahan/show/{id}', [KelurahanController::class, 'show']);
+
+// Tugas laravel 4
+
+Route::get('/dashboard/pasien/create', [PasienController::class, 'create']);
+Route::post('/dashboard/pasien/store', [PasienController::class, 'store']);
+Route::get('/dashboard/pasien/show/{id}', [PasienController::class, 'show']);

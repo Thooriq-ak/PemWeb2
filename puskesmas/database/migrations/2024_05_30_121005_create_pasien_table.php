@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('kode');
             $table->string('nama_pasien');
             $table->string('tempat_lahir');
-            $table->string('tanggal_lahir');
+            $table->date('tanggal_lahir');
             $table->string('gender');
-            $table->string('email');
+            $table->mail('email');
             $table->string('alamat');
             $table->string('unit_kerja');
             $table->timestamps();
