@@ -25,8 +25,8 @@
                 <td>{{ $pasien->email }}</td>
                 <td>{{ $pasien->alamat }}</td>
                 <td>{{ $pasien->unit_kerja }}</td>
-                <th>{{ $pasien->created_at }}</th>
-                <th>{{ $pasien->updated_at }}</th>
+                <td>{{ $pasien->created_at }}</td>
+                <td>{{ $pasien->updated_at }}</td>
             </tr>
         </table>
     </x-slot>

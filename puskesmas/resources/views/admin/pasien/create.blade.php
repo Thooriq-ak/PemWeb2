@@ -35,8 +35,8 @@
                 <div class="col-sm-8">
                     <select class="form-control" id="gender" name="gender" required>
                         <option value="" disabled selected>Pilih Gender</option>
-                        <option value="m" {{ old('gender') == 'laki-laki' ? 'selected' : '' }}>Laki-Laki</option>
-                        <option value="f" {{ old('gender') == 'perempuan' ? 'selected' : '' }}>Perempuan</option>
+                        <option value="laki-laki" {{ old('gender') == 'laki-laki' ? 'selected' : '' }}>Laki-Laki</option>
+                        <option value="perempuan" {{ old('gender') == 'perempuan' ? 'selected' : '' }}>Perempuan</option>
                     </select>
                 </div>
             </div>
