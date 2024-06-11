@@ -50,7 +50,7 @@ class PasienController extends Controller
 
         Pasien::create($validated);
 
-        return redirect('dashboard/pasien');
+        return redirect('dashboard/pasien')->with('pesan', 'Data berasil di Tambahkan!');
     }
 
 
