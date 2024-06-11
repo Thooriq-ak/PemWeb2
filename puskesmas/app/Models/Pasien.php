@@ -20,3 +20,4 @@ class Pasien extends Model
         'unit_kerja',
     ];
 }
+
